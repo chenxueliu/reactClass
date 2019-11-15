@@ -1,0 +1,26 @@
+*{
+    margin:0;
+    padding: 0;
+}
+.search-bar{
+    input{
+        height: 50px;
+        line-height: 50px;
+    }
+    button{
+        line-height: 50px;
+        padding: 0 10px;
+    }
+}
+.search-list,.history-list{
+    display: flex;
+    li{
+        font-size: 40px;
+        border:2px solid #6666;
+        background: lightblue;
+        color: white;
+        margin: 15px;
+        padding: 15px;
+        border-radius: 4px;
+    }
+}

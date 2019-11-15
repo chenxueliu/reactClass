@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var obj = {
+        //   创建属性
+        name: '陈个哈哈',
+        age: '20',
+        home: '哈哈哈',
+        // 创建方法
+        sayName: function() {
+          //   alert(this.name)
+        }
+      }
+      obj.sayName()
+      var obj2 = {
+        name: '陈个嘿嘿',
+        age: 18,
+        home: '黑黑黑 ',
+        sayName: function() {
+          //   alert(this.name)
+        }
+      }
+      //   工厂函数：制造一些东西，用来批量生产对象，
+      function createPerson(name, age, home) {
+        //   原料(创建一个空对象)
+        var obj = new Object()
+        // 加工 ：给空对象添加属性和方法
+        obj.name = name
+        obj.age = age
+        obj.home = home
+        obj.sayName = function() {
+          //   alert(this.name)
+          return obj
+        }
+        // 出厂：把这个对象返回出去
+        return obj
+      }
+      var person1 = createPerson('陈个哈哈', 20, '哈哈哈')
+      console.log(person1.sayName())
+
+      function createDog(name, age) {
+        // 创建空对象
+        var object = new Object()
+        // 给对象添加属性和方法
+        object.name = name
+        object.age = age
+        object.sayName = function() {
+          //   alert(this.name)
+          return object
+        }
+        return object
+      }
+      var dog = createDog('柯基', 2)
+      console.log(dog.sayName())
+      //   构造函数
+      // 由工厂函数创建出来的对象都是由object类型
+      // person
+      // dog
+      // 构造函数：
+      // 写法不同 首字母大写
+      // 调用方式不同 ：需要new 来调用
+      //   new 操作符都干些什么
+      // 1.创建了一个空对象
+      // 2.返回了这个对象
+      // 3把函数中的this指向了这个对象
+      //   4.执行我们自己写的代码
+      //   以上四步除了四步意外，是我们做的，其他三步都是内部执行的
+      //   Person：构造函数，类
+      // p1:构造出的实例
+      function Person(name, age, home) {
+        console.log(this)
+        this.name = name
+        this.age = age
+        this.home = home
+        this.sayName = function() {
+          alert(this.name)
+        }
+      }
+      var p1 = new Person('陈个哈哈', 20, '哈哈哈')
+      console.log(p1)
+
+      function Dog(name, age) {
+        console.log(this)
+        this.name = name
+        this.age = age
+        this.sayName = function() {
+          alert(this.name)
+        }
+      }
+      var p2 = new Dog('柯基', 2)
+      console.log(p2)
+      //   引用数据类型(对象，函数，数组) 这些对象上都有一个__propto__属性
+      // 对于函数来说，每一个函数都有prototype属性，检测实例是否是某个类，实例instanceof类
+      // var obj={
+      // name:'lili'
+      // }
+      // obj.__proto__===Object.prototype 返回true
+      // var arr=[1,2,3]
+      // arr.__proto__===array
+      // 普通函数的this指向window，对象方式调用函数指向这个对象，构造函数的this指向实例化的对象，通过call，apply改变
+    </script>
+  </body>
+</html>

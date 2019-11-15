@@ -1,0 +1,61 @@
+
+.container{
+    width: 1600px;
+    height: 100vh;
+    .head{
+        .clickp{
+            p{
+                width: 400px;
+                border: 1px gray solid;
+                text-align: center;
+            }
+            span{
+                color: aquamarine;
+                font-weight: 900;
+                padding: 30px;
+            }
+        }
+    }
+    .inputbox{
+        input{
+            width:300px;
+            margin:100px 400px;
+        }
+    }
+    .ulbox{
+        width:100%;
+        height: 100vh;
+        // background:wheat;
+      a{
+          text-decoration: none;
+          color: black;
+          text-align: left;
+          display: inline-block;
+      }  
+      .active{
+          color: red;
+      }
+      .nav-two{
+          display: none;
+          a{
+              color:black;
+          }
+          .active{
+            color: red;
+        }
+        .nav-item{
+            margin:25px;
+        }
+      }
+      .add{
+          font-size: 40px;
+          font-weight: 900;
+          background: #cccccc;;
+          padding-right: 40px;
+          margin: 20px;
+      }
+     .nav-item:hover>.nav-two{
+            display: block;
+     }
+    }
+}

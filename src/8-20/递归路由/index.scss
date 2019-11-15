@@ -1,0 +1,38 @@
+.nav-link {
+  font-size: 30px;
+
+  // 一级导航
+  .n-l-one {
+    a {
+      color: black;
+      text-decoration: none;
+    }
+
+    // 二级导航
+    .n-l-two {
+      display: none;
+    }
+
+    // 当一级导航鼠标划入将二级显示
+
+    .nav-item {
+      margin: 15px;
+    }
+
+    > .nav-item:hover {
+      .n-l-two {
+        display: block;
+
+        .nav-item {
+          margin: 5px;
+          border: 1px solid red;
+        }
+      }
+    }
+  }
+
+  // 默认的高亮
+  .active {
+    color: red;
+  }
+}

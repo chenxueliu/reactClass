@@ -1,0 +1,21 @@
+.form {
+  font-size: 40px;
+  input {
+    width: 300px;
+  }
+
+  label {
+    display: inline-block;
+
+    .red {
+      color: red;
+      font-size: 30px;
+    }
+
+    .green {
+      color: green;
+      font-size: 30px;
+      font-weight: 600;
+    }
+  }
+}

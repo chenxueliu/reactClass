@@ -1,0 +1,1 @@
+const ON_CHANGE_INPUT = 'onChangeInput'
